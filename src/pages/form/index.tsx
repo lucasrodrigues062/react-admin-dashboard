@@ -1,4 +1,4 @@
-import { TextField, useMediaQuery } from "@mui/material";
+import { Button, TextField, useMediaQuery } from "@mui/material";
 import { Box } from "@mui/system";
 import { Formik } from "formik";
 import Header from "../../components/Header";
@@ -21,7 +21,7 @@ const initialValues = {
 };
 
 const phoneRegExp: RegExp = new RegExp(
-  "^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$"
+  "^[+]?[(]?[0-9]{4}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$"
 );
 
 const userSchema = yup.object().shape({
@@ -144,6 +144,11 @@ const Form = () => {
                 helperText={touched.address2 && errors.address2}
                 sx={{ gridColumn: "span 4" }}
               />
+            </Box>
+            <Box display={"flex"} justifyContent={"end"} mt={"20px"}>
+              <Button type="submit" color="secondary" variant="contained">
+                Create New User
+              </Button>
             </Box>
           </form>
         )}
