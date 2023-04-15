@@ -1,19 +1,17 @@
+import BarChart from "@/components/BarChart";
 import Header from "@/components/Header";
 import { Box } from "@mui/material";
 import type { NextPage } from "next";
 
-const Home: NextPage = () => {
+const Bar: NextPage = () => {
   return (
     <Box m={"20px"}>
-      <Box
-        display={"flex"}
-        justifyContent="space-between"
-        alignItems={"center"}
-      >
-        <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+      <Header title="BARCHART" subtitle="Simple Bar Chart" />
+      <Box height={"75vh"}>
+        <BarChart isDashboard={false} />
       </Box>
     </Box>
   );
 };
 
-export default Home;
+export default Bar;
