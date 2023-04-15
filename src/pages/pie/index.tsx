@@ -3,7 +3,7 @@ import PieChart from "@/components/PieChart";
 import { Box } from "@mui/material";
 import type { NextPage } from "next";
 
-const Bar: NextPage = () => {
+const Pie: NextPage = () => {
   return (
     <Box m={"20px"}>
       <Header title="PIECHART" subtitle="Simple Pie Chart" />
@@ -14,4 +14,4 @@ const Bar: NextPage = () => {
   );
 };
 
-export default Bar;
+export default Pie;
